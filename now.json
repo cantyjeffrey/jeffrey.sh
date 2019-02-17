@@ -9,7 +9,9 @@
     }
   ],
   "github": {
-    "autoAlias": false,
-    "silent": true
+    "enabled": true,
+    "autoAlias": true,
+    "silent": false,
+    "autoJobCancelation": true
   }
 }
