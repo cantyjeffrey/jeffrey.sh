@@ -1,0 +1,15 @@
+{
+  "name": "jeffrey.sh",
+  "version": 2,
+  "alias": ["jeffrey.sh", "www.jeffrey.sh"],
+  "builds": [
+    {
+      "src": "next.config.js",
+      "use": "@now/next"
+    }
+  ],
+  "github": {
+    "autoAlias": false,
+    "silent": true
+  }
+}
