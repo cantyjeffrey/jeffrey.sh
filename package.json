@@ -13,6 +13,7 @@
   "dependencies": {
     "fontfaceobserver": "^2.1.0",
     "next": "^8.0.1",
+    "next-fonts": "^0.17.0",
     "polished": "^2.3.3",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",

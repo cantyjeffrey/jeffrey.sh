@@ -1,8 +1,36 @@
 import { createGlobalStyle } from "styled-components";
-import { normalize } from "polished";
+import { reset } from "./reset";
+import fonts from "./fonts";
 
 const GlobalStyles = createGlobalStyle`
-  ${normalize()}
+  ${reset};
+
+  @font-face {
+    font-family: Moderat;
+    src: url(${fonts.ModeratRegularWoff}) format('woff2'),
+          url(${fonts.ModeratRegularWoff2}) format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: Moderat;
+    src: url(${fonts.ModeratMediumWoff}) format('woff2'),
+          url(${fonts.ModeratMediumWoff2}) format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: Moderat;
+    src: url(${fonts.ModeratBoldWoff}) format('woff2'),
+          url(${fonts.ModeratBoldWoff2}) format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
 
   :root {
     box-sizing: border-box;
@@ -13,39 +41,42 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 
-
-  html,
+html,
   body {
+    width: 100%;
     height: 100%;
-    margin: 0;
+    text-size-adjust: none;
   }
 
-  html {
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    text-rendering: optimizeLegibility;
-    text-size-adjust: 100%;
-  }
-
-  body {
-    font-size: 1rem;
-    line-height: 1.5rem;
-    font-weight: 400;
-    letter-spacing: .03125em;
-    text-decoration: inherit;
-    text-transform: inherit;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-kerning: normal;
+    font-variant-ligatures: contextual;
+    font-style: normal;
+    font-weight: 400;
+    color: #222;
+    font-size: 16px;
+    line-height: 24px;
   }
 
-  .fonts-0 body {
-    font-family: ApercuSubset, sans-serif;
+  .fonts-subset body {
+    font-family: ModeratSubset, sans-serif;
   }
 
-  .fonts-1 body {
-    font-family: Apercu, sans-serif;
+  .fonts-loaded body {
+    font-family: Moderat, sans-serif;
   }
+
+  @media screen and (min-aspect-ratio: 2/3) {
+    overflow: hidden;
+  }
+
+  @media print {}
 
   #viewport {
     position: absolute;

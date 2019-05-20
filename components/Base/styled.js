@@ -11,28 +11,30 @@ export const Root = styled.section`
 `;
 
 export const Container = styled.div`
-  max-width: 80vmin;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 2rem;
 
   p {
     margin: 0 0 1.5rem;
-    font-size: 14px;
-    font-family: ApercuMono, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    font-display: swap;
-    font-weight: normal;
-    line-height: 24px;
-    letter-spacing: 0.1176px;
 
     &:last-of-type {
       margin-bottom: 0;
+      font-weight: 500;
+    }
+
+    & strong {
+      font-weight: 500;
+      color: #000;
     }
 
     & a {
-      text-decoration: none;
-      font-weight: 600;
-      color: #222;
-      text-indent: 0.1rem;
+      -webkit-tap-highight-color: transparent;
       cursor: pointer;
-      border-bottom: 1px solid currentColor;
+      user-select: none;
+      font-weight: 500;
+      color: #000;
+      text-decoration: underline;
     }
   }
 `;

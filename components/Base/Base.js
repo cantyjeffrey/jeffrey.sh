@@ -4,18 +4,18 @@ import { Root, Container, Avatar } from "./styled";
 const Intro = () => (
   <Container>
     <p>
-      <strong>Jeffrey Canty</strong> is a user interface engineer based in <strong>Brooklyn, NY</strong>.{" "}
+      <strong>Jeffrey Canty</strong> is a user interface engineer specializing in design systems, accessibility,
+      performance, and front-end architecture. He prefers to talk in the first person.
+    </p>
+
+    <p>
+      He's passionate about creating outstanding user experiences that are driven by data, and differentiated by design.
     </p>
     <p>
-      He works as a Senior Software Engineer at{" "}
-      <a href="//casper.com" target="_blank" rel="noreferrer">
-        Casper
-      </a>
-      , focusing on design systems and front-end operations.
+      Currently available for freelance, contract, or consulting projects in remote and/or on-site environments.&nbsp;
     </p>
     <p>
-      &#8620;&nbsp;
-      <a href="mailto:hello@jeffrey.sh">hello@jeffrey.sh</a>
+      &#8620;&nbsp;<a href="mailto:hello@jeffrey.sh">hello@jeffrey.sh</a>
     </p>
   </Container>
 );
