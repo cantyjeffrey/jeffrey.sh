@@ -16,25 +16,23 @@ export const Container = styled.div`
   padding: 0 2rem;
 
   p {
-    margin: 0 0 1.5rem;
+    margin: 0 0 0.75rem;
+  }
 
-    &:last-of-type {
-      margin-bottom: 0;
+  & div {
+    margin-top: 2rem;
+    & p {
       font-weight: 500;
     }
+  }
 
-    & strong {
-      font-weight: 500;
-      color: #000;
-    }
-
-    & a {
-      -webkit-tap-highight-color: transparent;
-      cursor: pointer;
-      user-select: none;
-      font-weight: 500;
-      color: #000;
-      text-decoration: underline;
+  & ul {
+    & li {
+      margin: 0 0 0.25rem;
+      &:before {
+        content: "¬ ";
+        padding-right: 0.25rem;
+      }
     }
   }
 `;

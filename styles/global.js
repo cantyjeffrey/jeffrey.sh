@@ -91,6 +91,20 @@ html,
     display: flex;
     flex-direction: column;
   }
+
+  & strong {
+    font-weight: 500;
+    color: #000;
+  }
+
+  & a {
+    -webkit-tap-highight-color: transparent;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 500;
+    color: #000;
+    text-decoration: underline;
+  }
 `;
 
 export default GlobalStyles;
