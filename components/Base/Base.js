@@ -17,7 +17,7 @@ const Intro = () => (
 const Contact = () => (
   <ul>
     <li>
-      <a href="mailto:hello@jeffrey.sh" target="_blank">
+      <a href="mailto:hi@jeffrey.sh" target="_blank">
         Email
       </a>
     </li>
