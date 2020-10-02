@@ -71,8 +71,9 @@ export const Container = styled.div`
 `;
 
 export const Avatar = styled.img.attrs({
-  src: "/static/assets/avatar.svg",
-  alt: "Illustrated 8-bit avatar of Jeffrey Canty",
+  // src: "/static/assets/avatar.svg",
+  src: "/static/assets/Avatar_512x512_Optimized.png",
+  alt: "Illustrated avatar of Jeffrey Canty",
   role: "img",
 })`
   width: 140px;
