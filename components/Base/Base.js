@@ -5,57 +5,62 @@ import { Root, Container, Avatar, Toggle } from "./styled";
 const Intro = () => (
   <>
     <p>
-      Jeffrey Canty is a user interface engineer specializing in design systems, content infrastructure, and web
-      performance. He prefers to talk in the first person.
+      Jeffrey Canty (
+      <a href="https://pronoun.is/he" target="_blank">
+        he/him
+      </a>
+      ) is a user interface engineer specializing in design systems, content infrastructure, and inclusive digital
+      products.
     </p>
     <p>
-      He's passionate about creating outstanding user experiences that are driven by data and differentiated by design.
+      He's passionate about crafting outstanding user experiences that are driven by data, and differentiated by design.
     </p>
   </>
 );
 
+const contactLinks = [
+  {
+    href: "mailto:hi@jeffrey.sh",
+    title: "Email",
+  },
+  {
+    href: "//angel.co/jeffreycanty",
+    title: "AngelList",
+  },
+  {
+    href: "//github.com/cantyjeffrey",
+    title: "GitHub",
+  },
+  {
+    href: "//linkedin.com/in/cantyjeffrey",
+    title: "LinkedIn",
+  },
+  {
+    href: "//twitter.com/cantyjeffrey",
+    title: "Twitter",
+  },
+];
+
 const Contact = () => (
   <ul>
-    <li>
-      <a href="mailto:hi@jeffrey.sh" target="_blank">
-        Email
-      </a>
-    </li>
-    <li>
-      <a href="//angel.co/jeffreycanty" target="_blank">
-        AngelList
-      </a>
-    </li>
-    <li>
-      <a href="//github.com/cantyjeffrey" target="_blank">
-        GitHub
-      </a>
-    </li>
-    <li>
-      <a href="//linkedin.com/in/cantyjeffrey" target="_blank">
-        LinkedIn
-      </a>
-    </li>
-    <li>
-      <a href="//twitter.com/cantyjeffrey" target="_blank">
-        Twitter
-      </a>
-    </li>
+    {contactLinks.map(({ href, title }) => (
+      <li key={href}>
+        <a href={href} target="_blank">
+          {title}
+        </a>
+      </li>
+    ))}
   </ul>
 );
 
-const Status = () => (
-  <div>
-    <Contact />
-  </div>
-);
-
-export default () => {
+const Base = () => {
   const currentHour = new Date().getHours();
   const [theme, setTheme] = useState("light");
+
   useEffect(() => {
     currentHour === 0 || currentHour < 12 ? setTheme("dark") : setTheme("light");
   }, []);
+
   return (
     <Root role="main" theme={theme}>
       <Head>
@@ -69,8 +74,10 @@ export default () => {
       <Avatar theme={theme} />
       <Container>
         <Intro />
-        <Status />
+        <Contact />
       </Container>
     </Root>
   );
 };
+
+export default Base;
